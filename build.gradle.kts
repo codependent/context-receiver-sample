@@ -17,6 +17,7 @@ dependencies {
     implementation("io.arrow-kt:arrow-fx-coroutines")
     testImplementation(kotlin("test"))
     testImplementation("org.mockito:mockito-core:5.3.0")
+    testImplementation(kotlin("reflect"))
 }
 
 tasks.test {
