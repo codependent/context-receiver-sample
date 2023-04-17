@@ -14,11 +14,9 @@ class ServiceOneTests {
     fun `should return the correct aggregation result`() {
 
         val serviceTwo = mock(ServiceTwo::class.java)
+        val serviceOne = ServiceOne(serviceTwo)
 
         val result = either {
-
-            val serviceOne = ServiceOne(serviceTwo)
-
             `when`(serviceTwo.call("1")).thenReturn("1")
 
             val mockResult = serviceTwo.call("1")
